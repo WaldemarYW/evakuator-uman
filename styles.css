@@ -91,7 +91,7 @@ p {
   inset: 0;
   z-index: 0;
   background: url("image/hero.png") center / cover no-repeat;
-  opacity: 1;
+  opacity: 0.25;
 }
 
 .hero-content {
@@ -114,12 +114,14 @@ p {
   color: #e0f2fe;
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.9), 1px -1px 0 rgba(0, 0, 0, 0.9), -1px 1px 0 rgba(0, 0, 0, 0.9), 1px 1px 0 rgba(0, 0, 0, 0.9);
 }
 
 .hero p {
   color: #e2e8f0;
   max-width: 32rem;
   margin-bottom: 2rem;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.7), 1px -1px 0 rgba(0, 0, 0, 0.7), -1px 1px 0 rgba(0, 0, 0, 0.7), 1px 1px 0 rgba(0, 0, 0, 0.7);
 }
 
 .hero-actions {
