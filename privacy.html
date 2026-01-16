@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net; upgrade-insecure-requests"
-    />
-    <meta
       name="description"
       content="Політика конфіденційності служби Евакуатор Умань 24/7."
     />
@@ -15,7 +11,13 @@
     <link rel="alternate" hreflang="uk-UA" href="https://evakuator-vezu-nesu.com/privacy.html" />
     <link rel="alternate" hreflang="x-default" href="https://evakuator-vezu-nesu.com/privacy.html" />
     <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      as="style"
+      href="styles.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTEK44B8D6"></script>
     <script defer src="scripts/main.js"></script>

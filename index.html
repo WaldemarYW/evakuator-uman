@@ -5,10 +5,6 @@
     <meta name="google-site-verification" content="ACewEjhTPFjRaCebfVcjGX73H8bu5bY8CYxlzaEVI6o" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net; upgrade-insecure-requests"
-    />
-    <meta
       name="description"
       content="Евакуатор по місту та області. Везу Несу працюємо цілодобово. Швидко, недорого, надійно."
     />
@@ -42,7 +38,13 @@
     <link rel="alternate" hreflang="uk-UA" href="https://evakuator-vezu-nesu.com/" />
     <link rel="alternate" hreflang="x-default" href="https://evakuator-vezu-nesu.com/" />
     <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      as="style"
+      href="styles.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTEK44B8D6"></script>
     <script defer src="scripts/main.js"></script>
@@ -223,7 +225,7 @@
                       image/image-a-480.webp 480w,
                       image/image-a-640.webp 640w
                     "
-                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                    sizes="(max-width: 480px) 60vw, (max-width: 900px) 40vw, 320px"
                   />
                   <img
                     src="image/image-a.png"
@@ -249,7 +251,7 @@
                       image/image-b-480.webp 480w,
                       image/image-b-640.webp 640w
                     "
-                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                    sizes="(max-width: 480px) 60vw, (max-width: 900px) 40vw, 320px"
                   />
                   <img
                     src="image/image-b.png"
@@ -275,7 +277,7 @@
                       image/image-c-480.webp 480w,
                       image/image-c-640.webp 640w
                     "
-                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                    sizes="(max-width: 480px) 60vw, (max-width: 900px) 40vw, 320px"
                   />
                   <img
                     src="image/image-c.png"
@@ -301,7 +303,7 @@
                       image/image-d-480.webp 480w,
                       image/image-d-640.webp 640w
                     "
-                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                    sizes="(max-width: 480px) 60vw, (max-width: 900px) 40vw, 320px"
                   />
                   <img
                     src="image/image-d.png"
