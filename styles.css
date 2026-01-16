@@ -44,6 +44,11 @@ h3 {
   margin: 0 0 1rem;
 }
 
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
 p {
   margin: 0 0 0.875rem;
 }
