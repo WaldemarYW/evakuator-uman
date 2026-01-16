@@ -377,8 +377,8 @@ p {
 .details-visual img {
   width: 100%;
   max-width: 520px;
+  height: auto;
   border-radius: 24px;
-  object-fit: contain;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
   background: transparent;
 }
@@ -442,9 +442,9 @@ p {
 .about-illustration img {
   width: 100%;
   max-width: 520px;
+  height: auto;
   border-radius: 24px;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-  object-fit: contain;
   background: transparent;
 }
 
