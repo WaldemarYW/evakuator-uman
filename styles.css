@@ -560,7 +560,7 @@ p {
 .scroll-top.hidden {
   opacity: 0;
   pointer-events: none;
-  transform: translateY(10px);
+  visibility: hidden;
 }
 
 .scroll-top img {
@@ -592,7 +592,7 @@ p {
 .call-float.hidden {
   opacity: 0;
   pointer-events: none;
-  transform: translateY(10px);
+  visibility: hidden;
 }
 
 @media (max-width: 640px) {

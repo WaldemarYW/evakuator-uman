@@ -6,6 +6,7 @@
 - Fixed heading order (single `h1`, section `h2`, nested `h3`) and added `hreflang` + `x-default`.
 - Preloaded CSS non-blocking and added LCP image preloads.
 - Added a valid `robots.txt` and `_headers` (CSP + cache TTL for hosts that support response headers).
+- Added cache-busting query strings for CSS/JS to support long TTL.
 
 ## CSP + cache headers
 Mode A (strict, no third-party):
@@ -22,6 +23,9 @@ Cache TTL:
 - HTML uses `max-age=0, must-revalidate`.
 
 If you can set headers (Netlify/Cloudflare Pages), `_headers` is applied automatically. If you are on GitHub Pages, use Cloudflare Transform Rules/Worker or Cloudflare Pages as a proxy to inject CSP/cache headers.
+
+## Nginx (VPS)
+See `ops/nginx-headers.conf` for a ready-to-paste snippet with CSP, HSTS, COOP, XFO, and cache headers.
 
 ## Development
 Static site, no build step. Open `index.html` directly or serve the folder with any static server.
