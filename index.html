@@ -13,6 +13,32 @@
       content="Евакуатор по місту та області. Везу Несу працюємо цілодобово. Швидко, недорого, надійно."
     />
     <title>Евакуатор Умань 24/7</title>
+    <link
+      rel="preload"
+      as="image"
+      href="image/hero-1440.webp"
+      imagesrcset="
+        image/hero-480.webp 480w,
+        image/hero-768.webp 768w,
+        image/hero-1024.webp 1024w,
+        image/hero-1440.webp 1440w
+      "
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="image/hero-mobile-900.webp"
+      imagesrcset="
+        image/hero-mobile-480.webp 480w,
+        image/hero-mobile-768.webp 768w,
+        image/hero-mobile-900.webp 900w
+      "
+      imagesizes="100vw"
+      media="(max-width: 640px)"
+      fetchpriority="high"
+    />
     <link rel="alternate" hreflang="uk-UA" href="https://evakuator-vezu-nesu.com/" />
     <link rel="alternate" hreflang="x-default" href="https://evakuator-vezu-nesu.com/" />
     <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
@@ -83,6 +109,7 @@
             alt=""
             aria-hidden="true"
             fetchpriority="high"
+            loading="eager"
             decoding="async"
           />
         </picture>
