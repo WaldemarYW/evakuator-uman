@@ -4,29 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src 'none'; upgrade-insecure-requests"
+    />
+    <meta
       name="description"
       content="Політика конфіденційності служби Евакуатор Умань 24/7."
     />
     <title>Політика конфіденційності - Везу-Несу</title>
+    <link rel="alternate" hreflang="uk-UA" href="https://evakuator-vezu-nesu.com/privacy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://evakuator-vezu-nesu.com/privacy.html" />
     <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTEK44B8D6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-ZTEK44B8D6");
-    </script>
+    <script defer src="scripts/main.js"></script>
   </head>
   <body>
     <header class="top-bar">
       <div class="container">
         <div class="brand">
-          <img src="image/logo.png" alt="Логотип Евакуатор 24/7" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="image/logo-48.webp 48w, image/logo-96.webp 96w, image/logo-144.webp 144w"
+              sizes="48px"
+            />
+            <img
+              src="image/logo.png"
+              width="48"
+              height="48"
+              alt="Логотип Евакуатор 24/7"
+              decoding="async"
+            />
+          </picture>
           <span>Евакуатор 24/7</span>
         </div>
       </div>
@@ -42,34 +53,34 @@
             та захищає вашу інформацію.
           </p>
 
-          <h3>1. Збір інформації</h3>
+          <h2>1. Збір інформації</h2>
           <p>
             Ми не збираємо ваші персональні дані автоматично, окрім випадків, коли ви
             самостійно натискаєте на кнопки виклику або зв'язуєтесь з нами через
             месенджери.
           </p>
 
-          <h3>2. Використання даних</h3>
+          <h2>2. Використання даних</h2>
           <p>
             Будь-яка інформація, отримана від вас (наприклад, номер телефону),
             використовується виключно для надання послуг евакуації та зв'язку з вами
             для уточнення деталей замовлення.
           </p>
 
-          <h3>3. Захист даних</h3>
+          <h2>3. Захист даних</h2>
           <p>
             Ваші дані не передаються третім особам. Ми використовуємо безпечні
             протоколи (HTTPS) для захисту передачі інформації на нашому Сайті.
           </p>
 
-          <h3>4. Файли Cookie</h3>
+          <h2>4. Файли Cookie</h2>
           <p>
             Сайт може використовувати файли cookie для аналізу трафіку за допомогою
             сервісів Google Analytics. Ви можете вимкнути cookie у налаштуваннях
             свого браузера.
           </p>
 
-          <h3>5. Згода</h3>
+          <h2>5. Згода</h2>
           <p>
             Використовуючи наш Сайт, ви погоджуєтесь з умовами цієї Політики
             конфіденційності.
@@ -92,7 +103,7 @@
     <footer class="site-footer">
         <div class="container footer-content">
           <div>
-            <h3>Екстрена допомога</h3>
+            <h2>Екстрена допомога</h2>
             <p>Цілодобово, 7 днів на тиждень.</p>
           </div>
           <div class="footer-contacts">
@@ -100,7 +111,7 @@
             <a href="tel:+380689110909">+38 (068) 911 09 09</a>
           </div>
           <div class="footer-legal">
-            <h3>Юридична інформація</h3>
+            <h2>Юридична інформація</h2>
             <p>ФОП Овчар С.В.</p>
             <p>20361 Черкаська область, Уманський район, с. Янтарівка, вул. Шевченка, буд. 6</p>
             <a href="privacy.html">Політика конфіденційності</a>

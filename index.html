@@ -6,26 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'unsafe-inline'; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; img-src 'self' data:; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src 'none'; upgrade-insecure-requests"
+      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; frame-src 'none'; upgrade-insecure-requests"
     />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTEK44B8D6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-ZTEK44B8D6");
-    </script>
     <meta
       name="description"
       content="Евакуатор по місту та області. Везу Несу працюємо цілодобово. Швидко, недорого, надійно."
     />
     <title>Евакуатор Умань 24/7</title>
+    <link rel="alternate" hreflang="uk-UA" href="https://evakuator-vezu-nesu.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://evakuator-vezu-nesu.com/" />
     <link rel="icon" href="image/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTEK44B8D6"></script>
+    <script defer src="scripts/main.js"></script>
   </head>
   <body>
     <!-- Зображення зберігайте в папці image/ (поряд із цим файлом).
@@ -35,7 +29,20 @@
     <header class="top-bar">
       <div class="container">
         <div class="brand">
-          <img src="image/logo.png" alt="Логотип Евакуатор 24/7" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="image/logo-48.webp 48w, image/logo-96.webp 96w, image/logo-144.webp 144w"
+              sizes="48px"
+            />
+            <img
+              src="image/logo.png"
+              width="48"
+              height="48"
+              alt="Логотип Евакуатор 24/7"
+              decoding="async"
+            />
+          </picture>
           <span>Евакуатор 24/7</span>
         </div>
       </div>
@@ -43,6 +50,42 @@
 
     <main>
       <section class="hero">
+        <picture class="hero-bg">
+          <source
+            type="image/webp"
+            media="(max-width: 640px)"
+            srcset="
+              image/hero-mobile-480.webp 480w,
+              image/hero-mobile-768.webp 768w,
+              image/hero-mobile-900.webp 900w
+            "
+            sizes="100vw"
+          />
+          <source
+            type="image/webp"
+            srcset="
+              image/hero-480.webp 480w,
+              image/hero-768.webp 768w,
+              image/hero-1024.webp 1024w,
+              image/hero-1440.webp 1440w
+            "
+            sizes="100vw"
+          />
+          <source
+            media="(max-width: 640px)"
+            srcset="image/hero-mobile.png 900w"
+            sizes="100vw"
+          />
+          <img
+            src="image/hero.png"
+            width="1594"
+            height="1004"
+            alt=""
+            aria-hidden="true"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
         <div class="container hero-content">
           <div class="hero-text">
             <h1>Евакуатор Умань</h1>
@@ -59,37 +102,82 @@
       </section>
 
       <section class="steps">
-        <div class="container step-grid">
+        <div class="container">
+          <h2>Як це працює</h2>
+          <div class="step-grid">
           <article>
-            <img
-              class="step-icon"
-              src="image/step-call.png"
-              alt="Зателефонуйте оператору"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  image/step-call-128.webp 128w,
+                  image/step-call-192.webp 192w,
+                  image/step-call-256.webp 256w
+                "
+                sizes="(max-width: 640px) 72px, 104px"
+              />
+              <img
+                class="step-icon"
+                src="image/step-call.png"
+                width="1024"
+                height="1024"
+                alt="Зателефонуйте оператору"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <h3>Зателефонуйте оператору</h3>
             <p>Повідомте адресу та тип транспортного засобу.</p>
           </article>
           <article>
-            <img
-              class="step-icon"
-              src="image/step-location.png"
-              alt="Уточніть місцезнаходження"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  image/step-location-128.webp 128w,
+                  image/step-location-192.webp 192w,
+                  image/step-location-256.webp 256w
+                "
+                sizes="(max-width: 640px) 72px, 104px"
+              />
+              <img
+                class="step-icon"
+                src="image/step-location.png"
+                width="1024"
+                height="1024"
+                alt="Уточніть місцезнаходження"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <h3>Уточніть місцезнаходження</h3>
             <p>Передайте координати або орієнтири для під'їзду.</p>
           </article>
           <article>
-            <img
-              class="step-icon"
-              src="image/step-time.png"
-              alt="Очікуйте подачу"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  image/step-time-128.webp 128w,
+                  image/step-time-192.webp 192w,
+                  image/step-time-256.webp 256w
+                "
+                sizes="(max-width: 640px) 72px, 104px"
+              />
+              <img
+                class="step-icon"
+                src="image/step-time.png"
+                width="1024"
+                height="1024"
+                alt="Очікуйте подачу"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <h3>Очікуйте подачу</h3>
             <p>Екіпаж виїжджає одразу після підтвердження заявки.</p>
           </article>
+          </div>
         </div>
       </section>
 
@@ -100,11 +188,25 @@
             <article class="pricing-card">
               <h3>Легкові авто</h3>
               <div class="card-icon">
-                <img
-                  src="image/image-a.png"
-                  alt="Іконка легкового автомобіля"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      image/image-a-320.webp 320w,
+                      image/image-a-480.webp 480w,
+                      image/image-a-640.webp 640w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                  />
+                  <img
+                    src="image/image-a.png"
+                    width="1248"
+                    height="832"
+                    alt="Іконка легкового автомобіля"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <p class="price">від 1000 грн</p>
               <a class="cta-button" href="tel:+380639609273">Замовити</a>
@@ -112,11 +214,25 @@
             <article class="pricing-card">
               <h3>Мікроавтобуси</h3>
               <div class="card-icon">
-                <img
-                  src="image/image-b.png"
-                  alt="Іконка мікроавтобуса"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      image/image-b-320.webp 320w,
+                      image/image-b-480.webp 480w,
+                      image/image-b-640.webp 640w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                  />
+                  <img
+                    src="image/image-b.png"
+                    width="1248"
+                    height="832"
+                    alt="Іконка мікроавтобуса"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <p class="price">від 1200 грн</p>
               <a class="cta-button" href="tel:+380639609273">Замовити</a>
@@ -124,11 +240,25 @@
             <article class="pricing-card">
               <h3>С/г техніка</h3>
               <div class="card-icon">
-                <img
-                  src="image/image-c.png"
-                  alt="Іконка мотоцикла"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      image/image-c-320.webp 320w,
+                      image/image-c-480.webp 480w,
+                      image/image-c-640.webp 640w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                  />
+                  <img
+                    src="image/image-c.png"
+                    width="1248"
+                    height="832"
+                    alt="Іконка мотоцикла"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <p class="price">від 1200 грн</p>
               <a class="cta-button" href="tel:+380639609273">Замовити</a>
@@ -136,11 +266,25 @@
             <article class="pricing-card">
               <h3>Позашляховики</h3>
               <div class="card-icon">
-                <img
-                  src="image/image-d.png"
-                  alt="Іконка позашляховика"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="
+                      image/image-d-320.webp 320w,
+                      image/image-d-480.webp 480w,
+                      image/image-d-640.webp 640w
+                    "
+                    sizes="(max-width: 480px) 70vw, (max-width: 900px) 45vw, 320px"
+                  />
+                  <img
+                    src="image/image-d.png"
+                    width="1248"
+                    height="832"
+                    alt="Іконка позашляховика"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <p class="price">від 1000 грн</p>
               <a class="cta-button" href="tel:+380639609273">Замовити</a>
@@ -167,11 +311,26 @@
             </p>
           </div>
           <div class="about-illustration">
-            <img
-              src="image/about.png"
-              alt="Команда служби евакуації"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  image/about-480.webp 480w,
+                  image/about-768.webp 768w,
+                  image/about-1024.webp 1024w,
+                  image/about-1200.webp 1200w
+                "
+                sizes="(max-width: 900px) 90vw, 520px"
+              />
+              <img
+                src="image/about.png"
+                width="1200"
+                height="648"
+                alt="Команда служби евакуації"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -181,39 +340,95 @@
           <h2>Допомога в дорозі</h2>
           <div class="helpers-grid">
             <article>
-              <img
-                class="service-icon"
-                src="image/service-station.png"
-                alt="Підбір відповідного СТО"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    image/service-station-256.webp 256w,
+                    image/service-station-384.webp 384w,
+                    image/service-station-512.webp 512w
+                  "
+                  sizes="(max-width: 640px) 72px, 112px"
+                />
+                <img
+                  class="service-icon"
+                  src="image/service-station.png"
+                  width="1024"
+                  height="1024"
+                  alt="Підбір відповідного СТО"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <h3>Підберемо СТО</h3>
             </article>
             <article>
-              <img
-                class="service-icon"
-                src="image/service-fuel.png"
-                alt="Доставка пального"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    image/service-fuel-256.webp 256w,
+                    image/service-fuel-384.webp 384w,
+                    image/service-fuel-512.webp 512w
+                  "
+                  sizes="(max-width: 640px) 72px, 112px"
+                />
+                <img
+                  class="service-icon"
+                  src="image/service-fuel.png"
+                  width="1024"
+                  height="1024"
+                  alt="Доставка пального"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <h3>Доставимо пальне</h3>
             </article>
             <article>
-              <img
-                class="service-icon"
-                src="image/service-battery.png"
-                alt="Підзарядка акумулятора"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    image/service-battery-256.webp 256w,
+                    image/service-battery-384.webp 384w,
+                    image/service-battery-512.webp 512w
+                  "
+                  sizes="(max-width: 640px) 72px, 112px"
+                />
+                <img
+                  class="service-icon"
+                  src="image/service-battery.png"
+                  width="1024"
+                  height="1024"
+                  alt="Підзарядка акумулятора"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <h3>Зарядимо АКБ</h3>
             </article>
             <article>
-              <img
-                class="service-icon"
-                src="image/service-wheel.png"
-                alt="Заміна колеса"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    image/service-wheel-256.webp 256w,
+                    image/service-wheel-384.webp 384w,
+                    image/service-wheel-512.webp 512w
+                  "
+                  sizes="(max-width: 640px) 72px, 112px"
+                />
+                <img
+                  class="service-icon"
+                  src="image/service-wheel.png"
+                  width="1024"
+                  height="1024"
+                  alt="Заміна колеса"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <h3>Замінемо колесо</h3>
             </article>
           </div>
@@ -237,11 +452,26 @@
             </p>
           </div>
           <div class="details-visual">
-            <img
-              src="image/details.png"
-              alt="Евакуатор перевозить автомобіль містом"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  image/details-480.webp 480w,
+                  image/details-768.webp 768w,
+                  image/details-1024.webp 1024w,
+                  image/details-1408.webp 1408w
+                "
+                sizes="(max-width: 900px) 90vw, 520px"
+              />
+              <img
+                src="image/details.png"
+                width="1408"
+                height="736"
+                alt="Евакуатор перевозить автомобіль містом"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -270,7 +500,7 @@
     <footer class="site-footer">
         <div class="container footer-content">
           <div>
-            <h3>Екстрена допомога</h3>
+            <h2>Екстрена допомога</h2>
             <p>Цілодобово, 7 днів на тиждень.</p>
           </div>
           <div class="footer-contacts">
@@ -278,7 +508,7 @@
             <a href="tel:+380689110909">+38 (068) 911 09 09</a>
           </div>
           <div class="footer-legal">
-            <h3>Юридична інформація</h3>
+            <h2>Юридична інформація</h2>
             <p>ФОП Овчар С.В.</p>
             <p>20361 Черкаська область, Уманський район, с. Янтарівка, вул. Шевченка, буд. 6</p>
             <a href="privacy.html">Політика конфіденційності</a>
@@ -290,39 +520,33 @@
     </footer>
 
     <button class="scroll-top hidden" type="button" aria-label="Прокрутити вгору" title="Повернутися нагору">
-      <img src="image/up-hero.png" alt="" />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            image/up-hero-96.webp 96w,
+            image/up-hero-144.webp 144w,
+            image/up-hero-192.webp 192w
+          "
+          sizes="56px"
+        />
+        <img src="image/up-hero.png" width="1024" height="1024" alt="" decoding="async" />
+      </picture>
     </button>
 
     <a class="call-float hidden" href="tel:+380639609273" aria-label="Зателефонувати в евакуатор" title="Зателефонувати +38 (063) 960 92 73">
-      <img src="image/mobile-call.png" alt="" />
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            image/mobile-call-96.webp 96w,
+            image/mobile-call-144.webp 144w,
+            image/mobile-call-192.webp 192w
+          "
+          sizes="72px"
+        />
+        <img src="image/mobile-call.png" width="814" height="814" alt="" decoding="async" />
+      </picture>
     </a>
-
-    <script>
-      (function () {
-        const scrollButton = document.querySelector(".scroll-top");
-        const callButton = document.querySelector(".call-float");
-        if (!scrollButton) return;
-
-        const THRESHOLD = 200;
-
-        const toggleVisibility = () => {
-          if (window.scrollY > THRESHOLD) {
-            scrollButton.classList.remove("hidden");
-            callButton?.classList.remove("hidden");
-          } else {
-            scrollButton.classList.add("hidden");
-            callButton?.classList.add("hidden");
-          }
-        };
-
-        scrollButton.addEventListener("click", () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        window.addEventListener("scroll", toggleVisibility, { passive: true });
-        window.addEventListener("load", toggleVisibility);
-        toggleVisibility();
-      })();
-    </script>
   </body>
 </html>
